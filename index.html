@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkSmart - Parqueadero</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ParkSmart - Control de parqueadero</h1>
+
+        <form id="form-vehiculo">
+            <input type="text" id="placa" placeholder="Placa" required>
+            <select id="tipo">
+                <option value="M">Moto</option>
+                <option value="C">Carro</option>
+                <option value="K">Camioneta</option>
+                <option value="B">Bus</option>
+            </select>
+            <input type="number" id="horas" placeholder="Horas estacionado" min="1" required>
+            <button type="submit">Registrar vehículo</button>
+        </form>
+
+        <h2>Vehículos estacionados hoy</h2>
+        <table id="tabla-vehiculos">
+            <thead>
+                <tr><th>Placa</th><th>Tipo</th><th>Horas</th><th>Tarifa total</th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <h3 id="total-recaudado"></h3>
+    </div>
+
+    <script src="js/model/Vehiculo.js"></script>
+    <script src="js/view/UI.js"></script>
+    <script src="js/controller/ControladorParqueadero.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
